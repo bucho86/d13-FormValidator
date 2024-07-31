@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <button></button>
+    <div>grab nasa</div>
+    <script>
+        function search(searchWord) {
+            var nasaArray = [];
+            var card = ''; 
+            var url = "https://api.nasa.gov/mars-photos/api/v1/rovers"/
+           
+            card +=
+            <div class="card bg-base-100 w-96 shadow-xl">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">Shoes!</h2>
+    <p>you move way to fast</p>
+    <div class="card-actions justify-end">     
+  </div>
+</div>       
+    
+           
+        }
+        <main id="" output class="flex-flex-wrap"></main>
+    </script>
+        fetch(url) // get json data from nasa.gov API
+        .then(response => response.json()) // convert json into a regular object/array
+        .then(nasaData => {return resopnse.json();}) // focus in on just the part of the data that we need
+        nasaArray= nasaData.collection.item
+        
+</body>
+</html>

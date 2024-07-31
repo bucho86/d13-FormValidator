@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <leabe for="">Enter your input</leabe>
+    <input type="text" value="bucho1">   
+    <button type="submit">Submit</button>
+    
+    <div id="msgbBox">
+        <div id="msgSC"></div>
+        <div id="msgLC"></div>
+        <div id="msgUC"></div>
+        <div id="msgLength"></div>
+    </div>
+    
+        <script>
+        var regexLC = new RegExp('[a-z]');
+        var regexLC = /[a-z]      
+        var regexUC = /[A-Z]
+        var regexNum = /[0-9]
+        var regexNum =[0123456789]/;
+        var regexNum =/[]/;
+        var regexLength = /[a-z0-9]{8,}
+        var regexsc = /[~!@#$%^&*()_+=<,>.?/;'\|]/'
+        var regexsc = /[~!@#$%^&*()_+=<,>.]~
+
+
+            //check if value is greater then 8 character + green msgLength if yes, eles red     
+            //add typingArea keyup event listener to run checkLC
+            document.getElementById('typingArea').addEventListener('keyup',checkLength);
+            //add function to check number validation
+            function checkNU(){
+                var typeAreaValue= document.getElementById('typingArea').value;
+                var regexNU = new RegExp('[0-9]');
+                var msgNU= document.getElementById('msgNU');
+                if(TypingArea.value.match(regexNU)){
+                    msgNU.style.color='green';
+                    }eles{
+                        msgNU.style.color='red';
+                        }
+                        }
+
+                        //add function to check uppercase validation
+                        function checkUC(){
+                            var typeAreaValue= document.getElementById('typingArea').value;
+                            var regexUC = new RegExp('[A-Z]');
+                            var msgUC= document.getElementById('msgUC');
+                            if(TypingArea.value.match(regexUC)){
+                                msgUC.style.color='green';
+                                }eles{
+                                    msgUC.style.color='red';
+                                    }
+                                    }
+                                    //add function to check check langth validation
+                                    function checkLength(){
+                                        var typeAreaValue= document.getElementById('typingArea').value;
+                                        var msgLength= document.getElementById('msgLength');
+                                        var regexLength = new RegExp('[a-z]');
+                                        var requiredLength= 8;
+                                        if(TypingArea.value.match(regexLength)) TypingArea.value.length >= requiredLength
+                                        {
+                                            msgLength.style.color='green';
+                                            }eles{
+                                                msgLength.style.color='red';
+                                                }
+                                            }
+                                            //add function to check lowercase validation
+                                            function checkLC(){
+                                                var typeAreaValue= document.getElementById('typingArea').value;
+                                                var regexLC = new RegExp('[a-z]');
+                                                var msgLC= document.getElementById('msgLC');
+                                                if(TypingArea.value.match(regexLC)){
+                                                    msgLC.style.color='green';
+                                                    }eles{
+                                                        msgLC.style.color='red';
+                                                        }
+                                                    }
+                                                        //add function to check special charactor validation
+                                                        function checkSC(){
+                                                            var typeAreaValue= document.getElementById('typingArea').value;
+                                                            var regexSC = new RegExp('[!@#$%^&*()_+=-]');
+                                                            var msgSC= document.getElementById('msgSC');
+                                                            if(TypingArea.value.match(regexSC)){
+                                                                msgSC.style.color='green';
+                                                                }eles{
+                                                                    msgSC.style.color='red';
+                                                                    }
+                                                                }
+                                                        
+                            
+            
+            
+        </script>
+</body>
+</html>

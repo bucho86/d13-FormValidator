@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input id="ageIputBox">
+    <button onclick="checkAge()">check Age</button>
+    <div id="msgArea"></div>
+    <script>
+        function checkAge() {
+            //grab the agevalue from the input box
+            var ageValue = document.getElementById('ageIputBox').value;
+            // define the required age
+            var requiredAge = 21;
+            //define the message area
+            var msgArea = document.getElementById('msgArea');
+            // compare the agevalue to the required age
+            if (age >= requiredAge) {
+            // if the agevalue is greater then the required age, in msgArea print "you are good to go"
+            msgArea.innerHTML = 'You are good to go';
+            // if the agevalue is less then the required age, in msgArea print "you are not old enough"
+            } else {
+                msgArea.innerHTML = 'You are not old enough';
+
+            }               
+        }
+                    
+  
+    
+</script>
+</body>
+</html>

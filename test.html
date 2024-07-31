@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>    
+    <button onclick="grabData()">run fetch</button>
+    <div id="diplayArea">display Area</div> 
+    <script>
+     function grabData(){
+        var displayrea =document.getElementById('displayArea');
+        fetch ('https://images-api.nasa.gov/search?q=earth&page_size=4')
+        .then(response => response.json())
+        .then(data => displayrea.innerHTML = data)
+     }   
+    </script>    
+</body>
+</html>
